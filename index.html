@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1070316568733802496/tl7tfUmY_400x400.jpg" type="image/x-icon">
+
+    <style>
+        .otra-clase {
+            display: none;
+        }
+    </style>
+
+    <title>Rutas Del Conflicto Armado - Colombia</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center py-3 text-danger">Rutas Del Conflicto Armado - Colombia</h1>
+        <div class="embed-responsive horizontal" style="height: 750px">
+            <iframe style="width: 100%; height: 100%;" class="embed-responsive-item"
+                src="https://lookerstudio.google.com/embed/reporting/4fee132e-05c4-43d8-8a12-0e3a19ade7f4/page/M7DPD"
+                allowfullscreen></iframe>
+        </div>
+        <div class="embed-responsive vertical" style="height: 620px">
+            <iframe style="width: 100%; height: 100%;" class="embed-responsive-item"
+                src="https://lookerstudio.google.com/embed/reporting/26f1d3c8-64b8-4082-bf11-60679ee79449/page/M7DPD"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <footer class="bg-danger text-center mt-5">
+        <!-- Copyright -->
+        <div class="text-center text-white p-3">
+            © 2023 Copyright:
+            <a class="text-white" href="https://rutasdelconflicto.com/">rutasdelconflicto.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+
+    <script>
+        const miElemento = document.querySelector('.horizontal');
+        const miElemento2 = document.querySelector('.vertical');
+
+        const mediaQueryList = window.matchMedia('(max-width: 768px)'); // cambiar 768px por el ancho que desees
+
+        const cambiarClase = (mq) => {
+            if (mq.matches) {
+                // Si la pantalla es de tamaño de teléfono
+                miElemento.classList.add('otra-clase');
+                miElemento2.classList.remove('otra-clase');
+            } else {
+                // Si la pantalla no es de tamaño de teléfono
+                miElemento2.classList.add('otra-clase');
+                miElemento.classList.remove('otra-clase');
+            }
+        };
+
+        cambiarClase(mediaQueryList);
+        mediaQueryList.addListener(cambiarClase);
+    </script>
+</body>
+
+</html>
